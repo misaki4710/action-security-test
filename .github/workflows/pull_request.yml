@@ -1,0 +1,10 @@
+on: pull_request
+
+name: pull_request
+jobs:
+  pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create env file
+        run: echo "${{ secrets.ON_PUSH }}"
